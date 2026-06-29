@@ -48,9 +48,10 @@ git clone https://github.com/ekabotdev/task-manager-api.git
 ## Navigate into the project
 cd task-manager-api
 
-Configure your MySQL database
+## Configure your MySQL database
 Update the application.properties file
-Run
+
+## Run
 mvn spring-boot:run
 
 ## Future Improvements
