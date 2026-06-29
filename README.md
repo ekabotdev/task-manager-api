@@ -28,17 +28,6 @@ A RESTful Task Manager API built with Java and Spring Boot that allows users to 
 - Maven
 - Hibernate
 
-## Project Structure
-
-src
-├── controller
-├── service
-├── repository
-├── entity
-├── dto
-├── exception
-└── config
-
 ## API Endpoints
 
 | Method | Endpoint | Description |
@@ -54,7 +43,7 @@ src
 ## Running the Project
 
 1. Clone the repository
-git clone https://github.com/yourusername/task-manager-api.git
+git clone https://github.com/ekabotdev/task-manager-api.git
 
 ## Navigate into the project
 cd task-manager-api
