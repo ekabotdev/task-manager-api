@@ -40,6 +40,13 @@ A RESTful Task Manager API built with Java and Spring Boot that allows users to 
 | PUT | /api/tasks/{id} | Update Task |
 | DELETE | /api/tasks/{id} | Delete Task |
 
+
+## API Screenshots
+
+### Register
+![Register](images/register.png)
+
+
 ## Running the Project
 
 1. Clone the repository
