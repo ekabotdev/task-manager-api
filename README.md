@@ -56,16 +56,16 @@ mvn spring-boot:run
 
 ## Future Improvements
 
-User Authentication (JWT)
-Role-Based Authorization
-Pagination
-Search Tasks
-Task Categories
-Due Dates
-Task Priorities
-Docker Support
-Unit Testing
-Swagger/OpenAPI Documentation
+-User Authentication (JWT)
+-Role-Based Authorization
+-Pagination
+-Search Tasks
+-Task Categories
+-Due Dates
+-Task Priorities
+-Docker Support
+-Unit Testing
+-Swagger/OpenAPI Documentation
 
 
 ## Author
