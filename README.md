@@ -28,17 +28,6 @@ A RESTful Task Manager API built with Java and Spring Boot that allows users to 
 - Maven
 - Hibernate
 
-## Project Structure
-
-src
-├── controller
-├── service
-├── repository
-├── entity
-├── dto
-├── exception
-└── config
-
 ## API Endpoints
 
 | Method | Endpoint | Description |
@@ -51,31 +40,39 @@ src
 | PUT | /api/tasks/{id} | Update Task |
 | DELETE | /api/tasks/{id} | Delete Task |
 
+
+## API Screenshots
+
+### Register
+![Register](images/register.png)
+
+
 ## Running the Project
 
 1. Clone the repository
-git clone https://github.com/yourusername/task-manager-api.git
+git clone https://github.com/ekabotdev/task-manager-api.git
 
 ## Navigate into the project
 cd task-manager-api
 
-Configure your MySQL database
+## Configure your MySQL database
 Update the application.properties file
-Run
+
+## Run
 mvn spring-boot:run
 
 ## Future Improvements
 
-User Authentication (JWT)
-Role-Based Authorization
-Pagination
-Search Tasks
-Task Categories
-Due Dates
-Task Priorities
-Docker Support
-Unit Testing
-Swagger/OpenAPI Documentation
+-User Authentication (JWT)
+-Role-Based Authorization
+-Pagination
+-Search Tasks
+-Task Categories
+-Due Dates
+-Task Priorities
+-Docker Support
+-Unit Testing
+-Swagger/OpenAPI Documentation
 
 
 ## Author
