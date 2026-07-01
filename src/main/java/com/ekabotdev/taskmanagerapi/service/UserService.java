@@ -1,8 +1,11 @@
 package com.ekabotdev.taskmanagerapi.service;
 
 
+import com.ekabotdev.taskmanagerapi.dto.LoginRequest;
+import com.ekabotdev.taskmanagerapi.dto.LoginResponse;
 import com.ekabotdev.taskmanagerapi.dto.RegisterRequest;
 import com.ekabotdev.taskmanagerapi.dto.RegisterResponse;
+import com.ekabotdev.taskmanagerapi.exception.InvalidCredentialsException;
 import com.ekabotdev.taskmanagerapi.exception.UsernameAlreadyExistsException;
 import com.ekabotdev.taskmanagerapi.repository.UserRepository;
 
@@ -32,6 +35,19 @@ public class UserService {
         return new RegisterResponse(
                 "User registered successfully"
         );
+    }
+    public LoginResponse login(LoginRequest loginRequest) {
+        User user = userRepository.findByUsername(loginRequest.getUsername());
+        if (user == null) {
+            throw new InvalidCredentialsException("Invalid username or password ");
+        }
+        if (!passwordEncoder.matches(loginRequest.getPassword(), user.getPassword())) {
+            throw new InvalidCredentialsException("Invalid username or password");
+        }
+        return new LoginResponse(
+                "User logged in successfully"
+        );
+
     }
 
 }
