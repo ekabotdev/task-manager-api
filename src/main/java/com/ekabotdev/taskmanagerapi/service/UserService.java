@@ -7,14 +7,17 @@ import com.ekabotdev.taskmanagerapi.exception.UsernameAlreadyExistsException;
 import com.ekabotdev.taskmanagerapi.repository.UserRepository;
 
  import com.ekabotdev.taskmanagerapi.entity.User;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
 
     private final UserRepository userRepository;
-    public UserService(UserRepository userRepository) {
+    private final PasswordEncoder passwordEncoder;
+    public UserService(UserRepository userRepository,  PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
     public RegisterResponse register(RegisterRequest request) {
         if (userRepository.existsByUsername(request.getUsername())) {
@@ -23,7 +26,7 @@ public class UserService {
         }
         User user = new User();
         user.setUsername(request.getUsername());
-        user.setPassword(request.getPassword());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
 
         User userSaved = userRepository.save(user);
         return new RegisterResponse(
